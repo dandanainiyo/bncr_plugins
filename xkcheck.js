@@ -21,7 +21,7 @@
       添加账号：      星空设置 账号 密码
       签到:           星空签到（仅管理员）
       清空账号:       星空清空（仅管理员）
-      删除指定账号：  星空删除 账号  
+      删除指定账号：  星空删除 账号 （仅管理员） 
 
 
 */
@@ -53,6 +53,7 @@ module.exports = async s => {
   }else if(s.getMsg()=='星空签到'){
     if(!s.isAdmin()){return};
     userlist = await db.get("xkcheck");
+    console.log(userlist);
     if(!userlist){
       await s.delMsg(s.reply('请检查配置'),waitObj);
       return
@@ -65,9 +66,15 @@ module.exports = async s => {
     if(!s.isAdmin()){return};
     let name = s.param(2);
     userlist = await db.get("xkcheck");
-    if(db.del("xkcheck",name)){
-      await s.delMsg(s.reply("星空通知：删除成功"),waitObj);
-    }else{  await s.delMsg(s.reply("星空通知：删除失败"),waitObj)}
+    for(let i=0;i<userlist.length;i++){
+      console.log(userlist[i].user);
+      if(userlist[i].user==name){
+        userlist.splice(i,1);
+        await db.del('xkcheck',null);
+        await db.set('xkcheck',userlist);
+        await s.delMsg(s.reply('星空通知：删除成功'),waitObj);
+      }
+    }
   }
   else{
     let username = s.param(2);
@@ -77,11 +84,11 @@ module.exports = async s => {
       pwd:password
     };
     let tmp =await db.get("xkcheck",[]);
-    if(tmp){ 
+    if(tmp){
       tmp.push(userInfo);
     }else{
       tmp=[];
-      tmp.push(userlist)
+      tmp.push(userInfo)
     }
     await db.set("xkcheck",tmp);
     s.delMsg(await s.reply('星空签到：用户设置成功'),waitObj)
