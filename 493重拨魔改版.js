@@ -20,7 +20,7 @@
  */
 
 //userId和groupId建议二选一即可
-const userId = '633353607';
+const userId = '';
 const groupId = '';
 //key为你的重拨触发词
 const key = '重拨'
