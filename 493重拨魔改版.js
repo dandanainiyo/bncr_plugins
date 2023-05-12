@@ -8,6 +8,7 @@
  * @rule ^(493重拨)(开|关)$
  * @admin false
  * @disable false
+ * @priority 9999
  */
 /**
  * 
@@ -20,7 +21,7 @@
  */
 
 //userId和groupId建议二选一即可
-const userId = '';
+const userId = '1870891676';
 const groupId = '';
 //key为你的重拨触发词
 const key = '重拨'
@@ -43,14 +44,19 @@ module.exports = async s => {
     
     const status = await db.get('493Switch')
     if(status=='on'){
-        if(!await s.getUserId()==userId){
-            console.log('id不匹配')
-            return
-        }else if(!await s.getGroupId==groupId){
-            console.log('id不匹配')
-            return
+        if(userId){
+            if(!await s.getUserId()==userId){
+                console.log('id不匹配')
+                return
+            }
         }
+        else if (groupId){
+            if(!await s.getGroupId==groupId){
+            console.log('id不匹配')
+            return
+            }
+        } 
         sysMethod.inline(`${key}`);
     }
-    
+
 }
