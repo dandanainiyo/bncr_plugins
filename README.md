@@ -8,7 +8,7 @@
 - 红灯区插件
   https://github.com/RedLightsDistrict/Bncr_plugins.git
   
-  - Doraemon
+- Doraemon
   https://github.com/fjwpsyb/Bncr_plugin.git
 
 - onz3vyyds 
