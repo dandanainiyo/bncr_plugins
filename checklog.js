@@ -17,7 +17,7 @@
     2、仅超授可用
     3、设置 （panelIndex） 执行面板 对应红灯区奶酪棒位置，从0开始
     4、设置插件开关方式二选一：(默认插件关闭)
-        方式1：管理员发送set Heyboi checklogSwitc on/off 设置开关（on为启动插件off为关）
+        方式1：管理员发送set Heyboi checklogSwitch on/off 设置开关（on为启动插件off为关）
         方式2：管理员发送 青龙日志检测开/关 checklog on/off（英文中间有空格，中文没）
  * 注意：
     本插件只针对运行的任务进行判断，去重列表每天刷新。
