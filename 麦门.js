@@ -3,7 +3,7 @@
  * @name 白嫖m
  * @origin Heyboi自用
  * @version 1.0.0
- * @description 解析
+ * @description 白嫖m
  * @rule ^白嫖m$
  * @admin true
  * @disable false
