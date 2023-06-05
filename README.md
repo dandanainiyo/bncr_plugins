@@ -22,4 +22,10 @@
 
 - Dswang
   https://github.com/callacat/BncrJS_plugins.git
+  
+- DusKing
+  https://github.com/DusKing1/Bncr_plugin.git
+  
+- 烟烟烟烟烟雨啊！！！
+  https://github.com/yanyuwangluo/Bncr_plugins
 
