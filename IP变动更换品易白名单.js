@@ -22,17 +22,17 @@ const sysDB = new BncrDB('system');
 const axios = require('axios').default;
 module.exports = async s => {
     await sysMethod.testModule(['axios'], { install: true });
-    const getip = await axios.get("https://pycn.yapi.3866866.com/get_client_ip");
+    const getip = await axios.get("https://pycn.yapi.py.cn/get_client_ip");
     const localIp = getip.data.ret_data;
     const IpDB = await sysDB.get('oldIp');
     const nowip = localIp;
     console.log(`localIp:${localIp}\nIpDB:${IpDB}`)
     if (IpDB && nowip && IpDB !== nowip) {
         s.reply('正在更换白名单')
-        await axios.get(`https://pycn.yapi.3866866.com/index/index/save_white?neek=${neek}&appkey=${appkey}&white=${localIp}`)
+        await axios.get(`https://pycn.yapi.py.cn/index/index/save_white?neek=${neek}&appkey=${appkey}&white=${localIp}`)
         if(deleteOldIp){
             s.reply('正在删除老ip');
-            await axios.get(`https://pycn.yapi.3866866.com/index/index/del_white?neek==${neek}&appkey=${appkey}&white=${IpDB}`)
+            await axios.get(`https://pycn.yapi.py.cn/index/index/del_white?neek==${neek}&appkey=${appkey}&white=${IpDB}`)
         }
     }else{
         await s.reply('无需更换白名单')
