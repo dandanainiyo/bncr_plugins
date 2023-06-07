@@ -2,7 +2,7 @@
  * @author Heyboi
  * @name ip变动更换白名单
  * @origin Heyboi自用
- * @version 1.0.0
+ * @version 1.0.1
  * @description 检测ip变动自动更换品易白名单
  * @rule ^白名单$
  * @priority 1000
@@ -10,6 +10,8 @@
  * @public false
  * @disable false
  * @cron 0 *\/1 * * * *
+ 
+ v1.0.1  修复品易接口
 */
 
 // **********填写品易参数************
