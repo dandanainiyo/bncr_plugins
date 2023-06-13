@@ -1,7 +1,7 @@
 # bncr_plugins
 ## Heyboi自用库
 ### 随缘更新
-# 友情链接
+# 友情链接（排名不分先后）
 - 无界官网
   https://anmours.github.io/Bncr/#/
 
@@ -28,4 +28,6 @@
   
 - 烟烟烟烟烟雨啊！！！
   https://github.com/yanyuwangluo/Bncr_plugins
-
+  
+- 寒寒
+  https://github.com/djun90/hh_bncr_plugins
