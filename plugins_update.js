@@ -1,13 +1,12 @@
 /**
  * @author Heyboi
  * @name plugins_update
- * @origin Heyboi自用
+ * @team Heyboi自用
  * @version 1.0.0
  * @description 检测各个插件库并更新
  * @rule ^检测插件更新$
  * @admin true
- * @disable false
- * @cron 0 0 12 * * *
+ * @disable true
  * 
  * 警告：
     1、 本插件更新功能通过比对仓库和本地文件实现。会直接覆盖原文件！！！
@@ -38,5 +37,131 @@ const hub_list = [
     }
 ];
 /* 设置不更新的插件|配置文件 */
-const excludefile = ['SpyHandleMsg.js', 'SpyIsValid.js', 'SpyValueChange.js', 'SpyConfig.js'];
- /** Code Encryption Block[419fd178b7a37c9eae7b7426c4a04203d45e01cd4c8344ffddd8d874f1b64a318191f9514b98d644c03366d9e6625065bb3ada9d277a8f6fb930971e0048b983682a0a997b598f726353e8fdd7adfb16656d27460c5ceb7c5c353fec449ad25f562205328973a1d351c8a5cc9a33b2ce7554206fe1177427242b4188eeb19770726b7762f5478bff9d8c334d660b03b41f6de449e6e7a809145edf706d78ce0cea3260a76869e5ae9a38e758fcfd7c7f27ab6027e2b8f933afa1cf3ebd708ccee7aa75baea5977599cc1acb8d87955b4ca65ec22c0219936409c7756bac42e4a2a34def7dcc883d00bd05524283f8484a5395d7f40a9d2640abe14ac159632e0828942d97460057e88bde85cf671981aa9f21ab76194caea361ec4f1b41c4f685951b0e88006be1d583edfeb476603cb1d345c389c65b34e563fa11f6d27bcec20d01476bde78a548aa1d65eaa825e68881fa04808e500c584c5fa116da3cd9fbe290c2c8e74e08f3c6aff50d46056d6ea611fa8b66a762fa1575a43a9080548ec76d7ea913d4205df436a0923a35b9e8912f83eade663a8ee9180d992341a0701d8389414a1ce6fe136bfe65bb1a50b4454559e387ce4450cd0e9a2cee471488534c2bc525aaad10ac5f273b6ed0be4f47868eeca78f340b117e15c92b6002599c4ceea86a48be5f618d2057bedc5f05ddfa236300236ae1163ac392def48b61146efb56d98efb28a2c766696815925a7f464020cc7409386ddf3382513e5dda17b748c282dc6653a8bd8db1dce9a40c86c959586c7629b605dd9224008f341db0751cd15cbfecbfd195408808d1e45e18b69a03f173cb6f1ebf1b52254c64cb62d14cdf9e2b0931e6ec43e5617da959b0d57cecf1edf73a2b736acbbd8b1bcabb3227a8a8506f7b435c1f18a83097004f23be9a76dcd33cf70717fbc8c06e385ce33a0bdd4ff83796c405cf33a2e43f032770916bf98d3550a57c85fd38a227a0d6a59a4cfb7ef84ef1b930409096d4a3294638a6af39013ac05983f36971d1479fadc5e3bd0d24bd3ec94b6a2353d9adabcf89177ec0f4633d61919ce0aae8a41c740e396985d88285a1693e6917a8f99eba177dfc26ef40a74c4985a610e3f42459f3be3b47f8dce3146415feaebcf613ef5f24420d4226b5efdbc632a01cc2af38c71ab101a6a0045f82b730d7008f62d5fcd6f47cfe07ba7d9d459169212f1c52d0aaae87ecc54954bc7f0a89e4b5635a187b856f65763f09b6693961a5952390a5333f5ed2f4a422fa64ebfbaefc6e77f3bac67c85219c640eacb543679d0ed1cfecd72290d7d8cd54c7b647893746c619fc26dad206e4317b248cc64342873d4292b1d91206d7efbe04b75bbac0f0226a1ffdd204e1dc6f470e14a1ecf4f70270d8e382e506894fc7937afc0c2915f2090c80bc94a1b2de41e742ea6627298843a8fa4011e6c83e37b268fdab670a0bdcfaaccb5811746a28cb716208355bb323a6aaca70dadcec2a612ce6399be913658e693794bde6eb0d4e924df93ccc914521dfaf00883a1ad25d8c054924e7c6dcb818069725385be656c8e35903f763166f16a2fe5b09607dc8449468f9ea934bb4c2b173b64d3ea89d539eac910a21fa6a3248ff11b61dc5340d5743778adb21dbe05125a7fbecd60f15a21b052653f28cd43bc97f16ea4066beb91ab17782675bb5dafdeb6651fac1ae4d66494c2689ebaed826b4f3f2389c8d0344028dfbd0ebdef98af547d49b853929703a127b08d5e8fbd79e7bc3b26bb32308b7270694eec017e690f47f19f4b1cf9514bff5c7c00ac8237a8365978e439801822b50bd5f836a2b636a58b18a97647ec658569102459cd7f4d300fb21024bb80cc324ad4b25eef02cfef549b6bede0fc8b5bcf97d17862cd43240e33f4f43f409892658a29a803454cd3eaba8254932a15108a97dc195831e229bbf67e63d4ca9f738a99ed69f3552bbfc5631f37ef588ca42a3f89a7160b6830329a16db079bbbd508764d5ef57c369611548604daa3e3ee1556081f21c14e73e9211b46d633e2aea71d5000b8b6bdf8ee853e80deb86fa4b9ebf010bbf9bbddae147dd82f4c41d2bd0920e736320abc0e8553b96585b66198c0aed73936011b8a47321e1df30436825b75ae7801c971ca614d5cc03084c1b31343f1b34cd4142fb773ba0f400b04932f08623b5f05075de40a919cdbc6695667629c51fdef99c4d04cc0fd2e61b01de90f8690ac21c0c83eb6bec73b94911fbd0bca1f9e0af8bdb199d944b2c33c1c19299fdd91be04e997dd3df3cc2673f4d2625b5b9a4d1d7abb5d62eab86f22bacebab37aaf09f54d70b034d42130658a65ce01df6415113219851c41c6ca5789a6b83c9446eeefd79adb725b35b35cc33648adbffea7e77ab466f5166cd70a2eac7249d9f1b92acf34782efb651d24540b8f11dd6269c4e9aba4a0002c488ef8dcd0582103a9e8e7261e6272d31680d697373ce6c711094b769b0a2bce23c600b049cd2fbe30cde3783c8f7a421675c97426a36081aa5055f0904438c988a15abecb15d11edc9e7937858398c50f7d5e9534b1df7dbe51cec637662ca260263109c2ca90590606e91524c1f83b2fe5a822054607f248fe0d1625ec602c3c7e0a4f22e8e8640cc4c1ac207a7399104a2a43be68f3669445a9ee3e20afcce7e04b679e2ceed50c7cda088ccc172aa2823517a7537a393915770293f35a35df74f359e8cc5b941bf9f6148379c0ed6266f5155ba104f7c12700debd0605febec8ed2d5b3d186f889f9a6d92a62d17d80f551ae93e4203ba1bc8b665622551b7864eed1c5f7e969d39bb563de393cc926d0adbbf010e487931286e41e0cc4d11e98afadeb0a275a3133bee46aebef2a6499c803ba37b67700e3982e2b430ee3d8985db65ee3e5296010e20029a70cc587e6bac0fbba786bfc0582889d9ca65e60602bebf20d59573def629e2c0e9926a5e59e343122840bffeba13e9b192b194cebda785a25a5264e0e90a89e948ef928117425edacf716b2fece60f2bf4b4187b76e2b2ec84f20004139f44e113385e972076b51cc14e12f18d25bbe6b2af8d513a38a767d0631d169c1208b7e4ed20490c13d2dc36d9ff19d588dc1a01957d637cc666fe46d96091bc15e610b9d02734fee4acce326e13723fc009baa823c3a898f21b1f8510e85bb1b26c1217d27912b2edfe22202e5a280e9ae04e8da6ac3965e230cf4bf1b25d231b088fdd41267fd4a83f450d2f9e75261f53b2a7da180f3d600a6243163acd7f0b0e7206ff8e443ed13c25ef4b9236cd8e5ea190541847e0f13c6b268dacb362ce00349cebb298cba52c52c46f74249daf00f3044e4065eb23a1c429a04eb280ddb6489088bb5c3297bf47d8ebcc8b6790c730b26e45cf7d4fadc40ccfcd2ee56fa53f0c8ab942732f8fa5d49dedd2366e9f2919ef4c81b8832199c6c3698516312d0f865f8eacd930298c178065ca9375130ed95d224c118543f1e97c3107a314eaa96e0a7f45f7146cff62effb85ae7dbf57cf3b548f9b02dadc3cfb258511b7780adf6f115722ede4954f7a2f8e9bec2b68d028574d13e0258b97a75bbcc179f968473924c623e36cd89b884d261218a519bdd4adfc7c9a9a4329accbb4125cf1c40ae7d2158a2690a35a5d66023fa2dd77f8a3b5eb51ae42ae7b05c37ad706e988879eb98c2b5da723aa5cc70918a686ec91fdd02c38eb1be810ddec0b69d1ea8da10682a09c80d4346ba4f474819b51a446a26506a747bd44598adc0c96e65ec4f5ca47afe59f7d7056f9e2c66b176237b9296ab15b5402e303484ee2ab6752aab2027e39429d3fc3830f2b7b85960fb3a64858567b3c94c509fe740d1a013c7255b3f02ecc0fe3f6ff9b14f927784473e356ce62d662d7846bfb5fe9985a5afd89478bed45b62546d75823d4da65e826fc5751f5544370a1c4a1885d15cddc3c5ac8eb82524930daf1a5f3df985f3f1f6c752ae6dc8baa0e3d41add52dfff4a0f8e4b8a838bd3bc06fc8d4722e195838e507b8df7874f398a8637aedfd777e2aad1d1b6913d2cd94c7c467b665e207ecb996ea6431c88850619abb7a153e0ea0e946759f39ff0a992a610f7993d445660c8f2c3f35d33654044b5400f68146852a35129b4bdf2f0c8834ba2f8452891ac3c1e4cdff8123dac5e19899ed8195899eaccd1668ca4fde63583c9e815b710b779137d4bd61fab2b4a2d11a6471b055fa13858d608cf610064153ca26582d88b2b7a27f266534f580bd95c948f36644f2751b04991e8bd92df700c9e17ee4e2215daf1d6a2f1f93e0c3852ecd3992e12f2945fc503e840e6a3a682592ff9480d95f960d12268e41be67d230b53322d2a912653b6ee33ef6f384d1744d38d49f9a29ed54a0249f9cf9555beee20bd14ebdcee3d472c346c9ebc10f702e5c51a283e2a8192cfd7a968d2509c3f6bac5b485267f6a8906f6c1fcb477009a379e4af5bc94c9f28132de4293493702185b13424d4daa40e7eb756b0bd93133bb8645bdfd9bb0817aa2f4778c4f4a0c1fee47962251750a65d05368cfcdce320639a4d04b4024096d416a537cebe3daf996208686ae72e3a546f307f78c273b78d4786782b7d4dba8de4c3431a0de1e03c2af138c220d939a427ece300e681237ad90324c843016e14afcccb6e5f8d92100884a715aa83f1909e2790f4cbd34f765c4092a4f8ff07998a679bd8313a889a163f3c0e0f781899e8519ba234d92870473cf502248e5c66ce363ed2dd726827c6e514f0859913235e314a782d922e390c152e3a001c4afeae8acea016d7d99195fa026cbb744042ccb2471153ef8af60514076885d8e0056a984c777bc2cd278107c8e2b8095bbed8752f9fe1019409cefaac2c9628ab663d0367753acaaa3bc448f788cd370559f042a27fa40b2d00585b147714a1ecbfaf6ac7a69535589c9686ecebca19955e44f1bfa0ed3fd1dcc7b75e365f97a06c7480e550a62650d14f70028cd8dd1aa705b55be593abe74fb2f476f5cf9ae364933f3ffbbedb351f7faf858a60913e051623e8348181e5204b05bbda793f506e09df20ba9e9fb54725457c19f309ab5d897076ec236ee1791c3d545c58b6833ba9df6c94495c93ca81820cf57e9835e8afe2c57771a6d2964deb6bb03190732661ba1598ad131104b9a552c5db875568e73453ae9580eff9526128cd4aa7b8a5687a5dafe2f8b2816d724a3ff1e6aea8320e81a06f09d1549e7f19e3827b0ca3ff409317e1cab0c6bc9dc738e53c3cc1874edd91f589a82dc53628af56cee02aee786325fa59774b9284fded7531c72bf9a8478812d6dd83061014967b13c9112641618098772b361a90d2f61d7156bca32b04e0366c6a9c4bcbd59801d531caf18d8796ea71544df1e4008a1cd2698b001e61acaad534caa17b3ea37ba84dd42659463f95f9329f329298588b918c07a7ce93df1e989da12ce8d9e4e9e677868e86c6eb68154bfffb1421c6c0a21962ef63654e1aca9639209c4e9856d17e3d8b86d9a200d352713ed1def9de9549eebda66384ae0d7a2648bef8a041f500a7f2bc1948b180dbc06b7b0c9aea470a6bc920e829cb436e0400540bde688edcbbe657cba42ab2a69cbfbed39cc27a7bc8c079f313016a562a1e88634604163fd63f350a3b1004cb15c68b22fac6a742d0d32e2ced3893463a6bf29e6f1ff2a3bae5fa27e0ed909984086b7de966ef33091b77855b134b1b05aeb9751c4f3745d9d26d2fa409847af766101681daed247254717c09d531f5091169ebd7b485541f25aab51b0423ad546faf33867cbbef017d0df66ce00991ed0e638b5d0d3e9d7f7e82a89fa672811f5c89dfd6fbf13c144a6ad691ea4e3419854768d8d0ad114b7cae1e41bbb21233415443e6a8fe6a1c69501729091f50d50d960edc9d1d8a1403000ac75385ca20096600caf4f124b06f4fc39b3d5d96ee1afcc0542849ba4c24fc6f8c818e91ad0601e711529c9ee40266035eda9b8c2b99001a7dc5f495674938f56ee981edc45689d3c9af23030981e0cf50677efa134a12e39184c2cd329d6373623613959772d8a1f400addbb76a16f8880d4ed5cac953c9b294cbec02a73c13edd5e30e96a3afcfac7dd1e76c7f27da87e479aecd636885bd9de20d405167fe28d4e8414cf52c01d39991034796d19f3cad56f64dc88a08a4f6b439de259f3d560bd93048573f93e195966acd3c1e1c1a90481d32ed129498546de6004bba0e0f779d1127f99a0216491b8b48829343c1c06a5cfcce92216876a0563567e05302604c9698f097b29faab01727de6f3e7f22acc77fe946311744aeecf682b35527b6ed9f5bebda03797aceb2623ca99f6200d0ac37f54bc14deee761c1ac2495f3d210ccb7965d93574bd624b692db70eb0f1f47f4f2b71a656ca37bbc2f65c02379db1f48a3366ff2855e15c2428e0d19fe96130cb22b92ada6e4d89d9affb1385e3ad6a22fce2e80047e8b7bd6dca2c64531d294341be856aa74f1cb5cd5513efa3bda3019aab7d5907fc7c44f2d1823b221f34b1d82f] */
+const excludefile = ['无线店铺签到清理.js', 'SpyHandleMsg.js', 'SpyIsValid.js', 'SpyValueChange.js', 'SpyConfig.js'];
+ /* HideStart */
+module.exports = async s => {
+    // if(!await sysMethod.isDev()){ return }
+    await sysMethod.testModule(['@octokit/rest'], { install: true });
+    const {Octokit} = require('@octokit/rest');
+    const fs = require('fs');
+    const path = require('path');
+    const url = require('url');
+    const db = new BncrDB('Heyboi');
+    const token = await db.get('githubtoken', '');
+    const octokit = new Octokit({
+        auth: token,
+    });
+    const isSaved = await db.get('pluginsIsSaved', false);
+
+
+    let log = '';
+
+    function extractOwnerAndRepo(repositoryUrl) {
+        const parsedUrl = new URL(repositoryUrl);
+        const pathParts = parsedUrl.pathname.split('/').filter(part => part !== '');
+
+        if (pathParts.length >= 2) {
+            const repoName = pathParts[pathParts.length - 1];
+            const repoNameWithoutGit = repoName.replace('.git', '');
+            return {
+                owner: pathParts[0],
+                repo: repoNameWithoutGit,
+            };
+        } else {
+            return null;
+        }
+    }
+    async function checkForUpdates(owner, repo, localPath, directoryPath = '') {
+        try {
+            const res = await octokit.repos.getContent({
+                owner,
+                repo,
+                path: directoryPath
+            });
+
+            if (Array.isArray(res.data)) {
+                for (const item of res.data) {
+                    if (item.type === 'file') {
+                        if (!excludefile.includes(item.name)) {
+                            await compareAndUpdateFile(owner, repo, item.path, localPath);
+                        }
+
+                    } else if (item.type === 'dir') {
+                        await checkForUpdates(owner, repo, localPath, item.path);
+                    }
+                }
+
+            }
+
+        } catch (error) {
+            s.reply(`获取仓库目录失败:${error.message}`);
+            console.log(`获取仓库目录失败:${error.message}`);
+        }
+    }
+
+
+
+
+    async function compareAndUpdateFile(owner, repo, filePath, localPath) {
+        try {
+            // 获取远程文件的内容
+            const remoteResponse = await octokit.repos.getContent({
+                owner,
+                repo,
+                path: filePath,
+            });
+
+            if (remoteResponse.data.type === 'file') {
+                const remoteFileContent = Buffer.from(remoteResponse.data.content, 'base64').toString('utf-8');
+                const pluginsName = remoteResponse.data.name;
+                // 获取本地文件的内容
+                const localFilePath = path.join(localPath, filePath);
+
+                if (fs.existsSync(localFilePath)) {
+                    const localFileContent = fs.readFileSync(localFilePath, 'utf-8');
+                    // 如果本地文件内容与远程文件内容不同，则更新本地文件
+                    if (remoteFileContent !== localFileContent) {
+                        fs.writeFileSync(localFilePath, remoteFileContent);
+                        console.log(`${localFilePath} 更新成功`);
+                        log += `✅${pluginsName} 更新成功\n`;
+                        // s.reply(log);
+                    } else {
+                        log += `❎${pluginsName} 未变动\n`;
+                        console.log(`${localFilePath} 未变动`);
+                        // s.reply(log);
+                    }
+                } else {
+                    // 本地文件不存在，直接保存远程文件内容
+                    if (isSaved) {
+                        fs.writeFileSync(localFilePath, remoteFileContent);
+                        log += `✅${pluginsName} 创建成功\n`;
+                        // s.reply(log);
+                    }
+
+                }
+            }
+        } catch (error) {
+            console.log(`Error fetching or updating file ${filePath}:${error.message}`);
+            log += `Error fetching or updating file ${filePath}:${error.message}`;
+        }
+    }
+    async function main() {
+        let repository = {};
+        for (const hub of hub_list) {
+            try {
+                repository = extractOwnerAndRepo(hub.url);
+                await checkForUpdates(repository.owner, repository.repo, `BncrData/plugins/${hub.path}`);
+                log += `✅${repository.owner}/${repository.repo}更新成功\n`;
+            } catch {
+                log += `❎${repository.owner}/${repository.repo}更新失败\n`;
+            }
+        }
+        let replyid = await s.reply(log);
+        await s.delMsg(replyid, {
+            wait: 5
+        });
+    }
+
+    main()
+}
+/* HideEnd */
