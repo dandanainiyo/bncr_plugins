@@ -2,7 +2,7 @@
  * @author Heyboi
  * @name plugins_update
  * @team Heyboi自用
- * @version 2.0.0
+ * @version 2.0.1
  * @description 检测各个插件库并更新
  * @rule ^插件更新$
  * @admin true
