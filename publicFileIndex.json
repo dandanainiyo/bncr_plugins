@@ -1,0 +1,27 @@
+{
+  "annotation0": "该文件由系统自动生成.",
+  "annotation1": "当config.json中pluginsPublishingMode===\"git\"时且有public插件时生成",
+  "annotation2": "该文件用于插件市场索引,当更新插件至git时,请将该文件同步更新至git",
+  "+ssIllBSt4fBOupdNVyGBuzDV5k=": {
+    "type": "github",
+    "name": "bncr_DeepSeek",
+    "author": "Heyboi",
+    "team": "Heyboi自用",
+    "version": "1.0.0",
+    "description": "DeepSeek",
+    "classification": [
+      "Server"
+    ],
+    "filename": "bncr_DeepSeek.js",
+    "fileDir": "/plugins/自用插件/bncr_DeepSeek.js",
+    "systemVersionRange": "",
+    "isAdapter": false,
+    "isCron": false,
+    "isAuthentication": false,
+    "isEncPlugin": true,
+    "isMod": false,
+    "isService": false,
+    "id": "+ssIllBSt4fBOupdNVyGBuzDV5k=",
+    "isChatPlugin": true
+  }
+}
